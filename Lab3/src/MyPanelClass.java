@@ -26,43 +26,40 @@ public class MyPanelClass extends JPanel {
                         //Paint the background
                         g.setColor(Color.BLACK);
                         g.fillRect(x1, y1, width + 1, height + 1);
-                        //Draw a border
-//                        g.setColor(Color.YELLOW);
-//                        g.drawRect(x1, y1, width, height);
-//                        //Draw a second border inside the first one with color RED
-//                        g.setColor(Color.RED);
-//                        g.drawRect(x1 + 10, y1 + 10, width - 20 , height - 20);
-//                      //Line across the window
-//                        g.setColor(Color.WHITE);
-//                        g.drawLine(x1, y1, x2, y2);
-//                        //Second line across the window
-//                        g.setColor(Color.GREEN);
-//                        g.drawLine(x2, myInsets.right,x1,y2);
                         
-//                        g.setColor(Color.LIGHT_GRAY);
-//                        g.fillOval((getWidth()/2) - 27, (getHeight()/2) - 27, 55, 55);
-//                        Polygon p = new Polygon();
-//                        p.addPoint(x1 + 5, y1 + 25);
-//                        p.addPoint(x1 + 20, y1 + 10);
-//                        p.addPoint(x1 + 35, y1 + 25);
-//                        p.addPoint(x1 + 25, y1 + 25);
-//                        p.addPoint(x1 + 25, y1 + 45);
-//                        p.addPoint(x1 + 15, y1 + 45);
-//                        p.addPoint(x1 + 15, y1 + 25);
-//                        g.setColor(Color.YELLOW);
-//                        g.fillPolygon(p);
-                        Polygon p2 = new Polygon();
-                        p2.addPoint(x1 + 25, y1 + 73);
-                        p2.addPoint(x1 + 41, y1 + 73);
-                        p2.addPoint(x1 + 47, y1 + 58);
-                        p2.addPoint(x1 + 53, y1 + 73);
-                        p2.addPoint(x1 + 69, y1 + 73);
-                        p2.addPoint(x1 + 56, y1 + 83);
-                        p2.addPoint(x1 + 61, y1 + 98);
-                        p2.addPoint(x1 + 47, y1 + 88);
-                        p2.addPoint(x1 + 34, y1 + 98);
-                        p2.addPoint(x1 + 38, y1 + 83);
+                        //Draw the red rectangles of the flag
+                        g.setColor(Color.RED);
+                        g.fillRect(this.getWidth()/2 - 200, this.getHeight()/2 - 100, 400, 50);
+                        g.fillRect(this.getWidth()/2 - 200, (this.getHeight()/2 - 100) + 100, 400, 50);
+                        g.fillRect(this.getWidth()/2 - 200, (this.getHeight()/2 - 100) + 200, 400, 50);
+                        
+                        //Draw the white rectangles of the flag
                         g.setColor(Color.WHITE);
-                        g.drawPolygon(p2);
+                        g.fillRect(this.getWidth()/2 - 200, (this.getHeight()/2 - 100) + 50, 400, 50);
+                        g.fillRect(this.getWidth()/2 - 200, (this.getHeight()/2 - 100) + 150, 400, 50);
+                        
+                        // Draw the blue triangle 
+                        g.setColor(Color.BLUE);
+                        Polygon Triangulo = new Polygon();
+                        Triangulo.addPoint(this.getWidth()/2 - 200, this.getHeight()/2 - 100);
+                        Triangulo.addPoint(this.getWidth()/2 , this.getHeight()/2 - 100 + 125);
+                        Triangulo.addPoint(this.getWidth()/2 - 200 , this.getHeight()/2 - 100 + 250);
+                        g.fillPolygon(Triangulo);
+                        
+                        //50% of the star
+                        Polygon MiddleStar= new Polygon();
+                        MiddleStar.addPoint(this.getWidth()/2 - 200 + 70, this.getHeight()/2 - 100 + 80);
+                        MiddleStar.addPoint(this.getWidth()/2 - 200 + 45, this.getHeight()/2 - 100 + 155);
+                        MiddleStar.addPoint(this.getWidth()/2 - 200 + 70, this.getHeight()/2 - 100 + 130);
+                        MiddleStar.addPoint(this.getWidth()/2 - 200 + 95, this.getHeight()/2 - 100 + 155);
+                        g.setColor(Color.WHITE);
+                        g.fillPolygon(MiddleStar);
+                        
+                        //Another 50% of the star
+                        Polygon MiddleStar2= new Polygon();
+                        MiddleStar2.addPoint(this.getWidth()/2 - 200 + 30, this.getHeight()/2 - 100 + 105);
+                        MiddleStar2.addPoint(this.getWidth()/2 - 200 + 110, this.getHeight()/2 - 100 + 105);
+                        MiddleStar2.addPoint(this.getWidth()/2 - 200 + 70, this.getHeight()/2 - 100 + 130);
+                        g.fillPolygon(MiddleStar2);
 }
 }
